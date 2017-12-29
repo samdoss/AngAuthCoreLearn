@@ -47,10 +47,10 @@ namespace WebBoardAuth.Api.Controllers.v1
             //    return BadRequest(ModelState);
             //}
             /*** Register User to table ***/
-            data = new RegisterViewModel();
-            data.ConfirmPassword = "123123123";
-            data.Password = "123123123";
-            data.UserName = "123123123";
+            ////data = new RegisterViewModel();
+            ////data.ConfirmPassword = "123123123";
+            ////data.Password = "123123123";
+            ////data.UserName = "123123123";
 
             if (data.Password == data.ConfirmPassword)
             {
@@ -74,7 +74,7 @@ namespace WebBoardAuth.Api.Controllers.v1
         [HttpGet("CheckRegister")]
         public async Task<IActionResult> CheckRegister([FromBody] string username)
         {
-            username = "123123123";
+            //username = "123123123";
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -90,7 +90,7 @@ namespace WebBoardAuth.Api.Controllers.v1
         [HttpGet("CheckRegisterByID")]
         public async Task<IActionResult> CheckRegisterByID([FromBody] string user_id)
         {
-            user_id = "fdbb2400-861d-4bb8-a1ee-31a1a1965b1d";
+            //user_id = "fdbb2400-861d-4bb8-a1ee-31a1a1965b1d";
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -106,7 +106,7 @@ namespace WebBoardAuth.Api.Controllers.v1
         [HttpGet("PreActivate")]
         public async Task<IActionResult> PreActivate([FromBody] string username)
         {
-            username = "123123123";
+            //username = "123123123";
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -128,9 +128,9 @@ namespace WebBoardAuth.Api.Controllers.v1
         [HttpGet("PostActivate")]
         public async Task<IActionResult> PostActivate([FromBody] ActivateViewModel data)
         {
-            data = new ActivateViewModel();
-            data.Username = "123123123";
-            data.Token = "CfDJ8OmaK70eeZJEvHOZzinDgyBwTbCKh4i9AZlF6SNmIa%2BA9hYetipj1GIIFP0JCouy6WLjbCuArknGyK4tpvbNTicRpcJBydDqtCKqzg52Q%2BOBErLIJhtClyB2wi%2FFzJY5xeR2QevOH2Lub5dKiQzGwEOYdegj3YmrV88Iz6ZXTQDnENM06xR6Samx89qr2tCKx7AkokpMdOWYYfybvImtgNb6A84Qg0ggtYfnZIavZMXQL1FA4w%2Fc3Wb2oAyInjbYEA%3D%3D";
+            //data = new ActivateViewModel();
+            //data.Username = "123123123";
+            //data.Token = "CfDJ8OmaK70eeZJEvHOZzinDgyBwTbCKh4i9AZlF6SNmIa%2BA9hYetipj1GIIFP0JCouy6WLjbCuArknGyK4tpvbNTicRpcJBydDqtCKqzg52Q%2BOBErLIJhtClyB2wi%2FFzJY5xeR2QevOH2Lub5dKiQzGwEOYdegj3YmrV88Iz6ZXTQDnENM06xR6Samx89qr2tCKx7AkokpMdOWYYfybvImtgNb6A84Qg0ggtYfnZIavZMXQL1FA4w%2Fc3Wb2oAyInjbYEA%3D%3D";
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

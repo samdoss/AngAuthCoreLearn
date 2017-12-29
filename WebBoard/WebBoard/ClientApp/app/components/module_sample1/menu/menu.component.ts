@@ -34,52 +34,28 @@ export class MenuComponent implements OnInit {
             Response => {
                 console.log("post success")
                 console.log(Response);
-
             },
             err => {
                 //unauthorized refresh token 
                 console.log("unauth")
                 console.log("err", err)
                 this.errTxt = err;
-                //if (err.status == 401) {
-
-                //    this.AuthService.refreshSessionToken().subscribe(
-                //        Response => {
-                //            //Update session
-                //            this.localStorageService.set("accessToken", Response.access_token);
-                //            this.localStorageService.set("refreshToken", Response.refresh_token);
-                //            this.localStorageService.set("expiresTime", (Date.now() / 1000) + Response.expires_in);
-
+                //if (err.status == 401) { 
                 //            //re function
-                //            this.LearPost();
-                //        }
-                //    )
-                //} else {
-                //    this.router.navigate(['/login']);
+                //            this.LearPost(); 
                 //}
             }
         );
     }
 
-
-
     ppPost(): Observable<string> {
 
         let url = this._config.apiWebBoardURL + "api/ApiTest/www";
-        // let headers = new HttpHeaders({ 'Content-Type': 'text/json' });
+
         let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-        //var token = this.localStorageService.get<string>("accessToken");
-        //headers.append('Authorization', "Bearer " + token );
+
         let thsSub = this.http.post<string>(url, { value: "s1" }, { headers })
         return thsSub;
-        //.subscribe(data => {
-        //    console.log(data)
-        //    return boolean
-        //}, er => {
-        //    console.error(er)
-        //}
-
-        //)
 
     }
 

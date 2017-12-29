@@ -13,7 +13,8 @@ namespace WebBoard.Controllers.TestApiAuth
     [Route("api/[controller]")]
     // [Authorize]
     [EnableCors("AllowAll")]
-    [Authorize("WebBoardAuthorize")]
+    //IF comment this below [Authorize("WebBoardAuthorize")] will be surely see a token  HttpContext.Request.Headers
+    //[Authorize("WebBoardAuthorize")]
     public class ApiTestController : Controller
     {  
         [HttpPost("www")]

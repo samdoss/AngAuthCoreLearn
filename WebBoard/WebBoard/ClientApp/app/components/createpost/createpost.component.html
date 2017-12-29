@@ -1,0 +1,13 @@
+<h1>createpost</h1>
+
+PostSubject
+<input type="text" [(ngModel)]="this.postdata.postSubject" />
+
+PostDetail
+<input type="text" [(ngModel)]="this.postdata.postDetail" />
+
+
+
+<button (click)="CreatePost()">CreatePost</button>
+
+<button (click)="this.router.navigate(['./mainboard'])">redirect to main</button>

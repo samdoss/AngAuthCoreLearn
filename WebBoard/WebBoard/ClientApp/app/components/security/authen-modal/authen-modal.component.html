@@ -1,0 +1,42 @@
+<div class="modal fade" bsModal #AfterAuthenModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-aut" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header modal-header-aut">
+                <div class="text-left text-header col-md-6 col-xs-6">
+                    <i class="fa fa-lock fa-2x"></i>
+                    <!--<p *ngIf="getAuthenModel.isModel == 'forget'"> ลืมรหัสผ่าน<p>
+                    <p *ngIf="getAuthenModel.isModel == 'Regis'"> สมัครสมาชิค<p>-->
+                </div>
+                <div class="text-right col-md-6 col-xs-6 modal-close">
+                   <i class="fa fa-close fa-lg" (click)="AfterAuthenModal.hide()"></i>
+                   
+                </div>
+            </div>
+            <!--Body-->
+            <div class="modal-body modal-body-aut">
+               <div class="text-center text-content">
+                    
+                        <!--<div class="col-md-12 col-xs-12 modal-body-icon">
+                            <i class="fa fa-envelope-o  mb-1 animated rotateIn"  *ngIf="getAuthenModel.isModel == 'forget'"></i>
+                            <i class="fa fa-check  mb-1 animated rotateIn" *ngIf="getAuthenModel.isModel == 'Regis'"></i>
+                        </div>-->
+                        <!--<p *ngIf="getAuthenModel.isModel == 'forget'">กรุณาตรวจสอบอีเมลของคุณ</p>
+                        <p *ngIf="getAuthenModel.isModel == 'Regis'">อีเมล</p>
+                        <p class="text-hilight">{{getAuthenModel.user_email}}</p>
+                        <label *ngIf="getAuthenModel.isModel == 'forget'">เพื่อเข้าไปตั้งค่ารหัสผ่านใหม่</label>
+                        <label *ngIf="getAuthenModel.isModel == 'Regis'">สมัครเรียบร้อยแล้ว สามารถเข้างานได้เลยค่ะ</label>-->
+                        
+                </div>
+            </div>
+            <!--Footer-->
+            <!--<div class="modal-footer model-footer-aut">
+                <a type="button" class="btn btn-modal-aut" (click)="AfterAuthenModal.hide()" *ngIf="getAuthenModel.isModel == 'forget'">ตกลง</a>
+                <a type="button" class="btn btn-modal-aut" (click)="AfterAuthenModal.hide()" *ngIf="getAuthenModel.isModel == 'Regis'">เข้าสู่ระบบ</a>
+            </div>-->
+        </div>
+        <!--/.Content-->
+</div>
+</div>

@@ -1,0 +1,41 @@
+﻿ 
+<div id="loginbox">
+ 
+    <div>
+        
+
+        <div class="input-group">
+            <div>
+                <label> Username </label>
+                <div class="flex-row">
+                    <input type="text" class="form-control" [(ngModel)]="username" (keyup.enter)="webLogin()" />
+                </div>
+            </div>
+
+            <div class="ptxs">
+                <label> Password </label>
+                <div class="flex-row">
+                    <input type="password" class="form-control" [(ngModel)]="password" (keyup.enter)="webLogin()" />
+                </div>
+            </div>
+        </div>
+         
+        <div class="pts">
+            <a class="btn login-btn full-width" (click)="onLogin()"> 
+                เข้าสู่ระบบ
+            </a>
+        </div>
+        <a href=""><label class="mtm text-white">ลืมรหัสผ่าน?</label></a>
+        <br />
+        <a (click)="register()"><label class="mtm text-white">register</label></a>
+         
+        <br />
+         
+    </div>
+
+</div>
+
+<!-- 
+<register-modal #RegisterModal (CloseRegisterModal)="AfterCloseRegisterModal($event)"></register-modal>
+<authen-modal #AfterAuthenModal [getAuthenModel]="AuthenModel"></authen-modal>
+    -->

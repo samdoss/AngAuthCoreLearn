@@ -1,0 +1,22 @@
+﻿<div class="modal fade" bsModal #RegisterModal="bs-modal" [config]="{backdrop: 'static'}">
+    <div role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <br />
+                <input type="text" [(ngModel)]="UserData.Email" placeholder="Email"/>
+                <br />
+                <input type="text" [(ngModel)]="UserData.Password" placeholder="Password"/>
+                <br />
+                <input type="text" [(ngModel)]="UserData.RePassword" placeholder="RePassword"/>
+                <br />
+                <input type="text" [(ngModel)]="UserData.Firstname" placeholder="Firstname"/>
+                <br />
+                <input type="text" [(ngModel)]="UserData.Lastname" placeholder="Lastname"/>
+                <br />
+                <input type="button" (click)="register()" value="register" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
